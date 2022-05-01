@@ -1,0 +1,17 @@
+# 不同环境不同连接信息(我做了脱敏, 请换成自己真实的)
+host:
+  redis: ${redis.host}
+  mysql: ${db.host}
+password:
+  redis: ${redis.password}
+  mysql: ${db.password}
+usernmae:
+  mysql:  ${db.username}
+
+#线程池配置
+executor:
+  pool:
+    corePoolSize: 16
+    maxPoolSize: 16
+    queueCapacity: 0
+    keepAliveSeconds: 0
