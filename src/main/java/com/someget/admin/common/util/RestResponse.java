@@ -7,17 +7,18 @@ import java.util.HashMap;
  */
 @SuppressWarnings("serial")
 public class RestResponse extends HashMap<String, Object> {
-    public static RestResponse success(){
+    public static RestResponse success() {
         return success("成功");
     }
-    public static RestResponse success(String message){
+
+    public static RestResponse success(String message) {
         RestResponse restResponse = new RestResponse();
         restResponse.setSuccess(true);
         restResponse.setMessage(message);
         return restResponse;
     }
 
-    public static RestResponse failure(String message){
+    public static RestResponse failure(String message) {
         RestResponse restResponse = new RestResponse();
         restResponse.setSuccess(false);
         restResponse.setMessage(message);
@@ -25,7 +26,7 @@ public class RestResponse extends HashMap<String, Object> {
     }
 
     //异常失败封装
-    public static RestResponse failure(Exception exception){
+    public static RestResponse failure(Exception exception) {
         RestResponse restResponse = new RestResponse();
         restResponse.setSuccess(false);
         restResponse.setMessage(exception.getMessage());
@@ -52,9 +53,9 @@ public class RestResponse extends HashMap<String, Object> {
         if (page != null) put("page", page);
         return this;
     }
-    
-    public RestResponse setCurrentPage(Integer currentPage){
-    	if (currentPage != null) put("currentPage", currentPage);
+
+    public RestResponse setCurrentPage(Integer currentPage) {
+        if (currentPage != null) put("currentPage", currentPage);
         return this;
     }
 

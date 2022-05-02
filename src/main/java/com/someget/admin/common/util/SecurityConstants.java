@@ -2,6 +2,7 @@ package com.someget.admin.common.util;
 
 /**
  * 安全相关的常量
+ *
  * @author zyf
  * @date 2022-03-25 20:03
  */
@@ -10,7 +11,7 @@ public class SecurityConstants {
      * shiro采用加密算法
      */
     public static final String HASH_ALGORITHM = "SHA-1";
-	
+
     /**
      * 生成Hash值的迭代次数
      */

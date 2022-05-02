@@ -53,7 +53,7 @@
                 and parent_id = #{parentId}
             </when>
             <otherwise>
-                and parent_id is NULL
+                and parent_id = 0
             </otherwise>
         </choose>
         <if test="isShow == true">
@@ -133,7 +133,7 @@
                 and m.parent_id = #{parentId}
             </when>
             <otherwise>
-                and m.parent_id is NULL
+                and m.parent_id = 0
             </otherwise>
         </choose>
         and m.is_show = true
