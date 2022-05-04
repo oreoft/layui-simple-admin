@@ -119,9 +119,9 @@
             <div class="layui-tab-content clildFrame">
                 <div class="layui-tab-item layui-show" style="top:0px;">
                     <#if gotoType==1 >
-                        <iframe id="rightFrameFocus" src="/mng/material/list"></iframe>
+                        <iframe id="rightFrameFocus" src="/mng/demo/list"></iframe>
                     <#else>
-                        <iframe id="rightFrameFocus" src="/mng/approve/list"></iframe>
+                        <iframe id="rightFrameFocus" src="/mng/demo/list"></iframe>
                     </#if>
                 </div>
             </div>

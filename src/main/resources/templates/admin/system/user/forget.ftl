@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>忘记密码--疫情防控物资管理系统</title>
+    <title>忘记密码--开箱即用后台演示系统</title>
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -13,7 +13,7 @@
 <div class="layadmin-user-login layadmin-user-display-show" id="LAY-user-login">
     <div class="layadmin-user-login-main">
         <div class="layadmin-user-login-box layadmin-user-login-header">
-            <h2>疫情防控物资管理系统</h2>
+            <h2>开箱即用后台演示系统</h2>
         </div>
         <div class="layadmin-user-login-box layadmin-user-login-body layui-form">
 

@@ -28,7 +28,7 @@
         <mybatisplus-spring-boot-starter.version>3.5.1</mybatisplus-spring-boot-starter.version>
         <fastjson.version>1.2.41</fastjson.version>
         <jackson.version>2.11.0</jackson.version>
-        <druid.version>1.1.9</druid.version>
+        <druid.version>1.1.21</druid.version>
     </properties>
 
     <repositories>
@@ -99,7 +99,7 @@
             <artifactId>spring-boot-starter-freemarker</artifactId>
         </dependency>
 
-        <!--下面是自己引入的架包-->
+        <!--下面是自己引入的jar包-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-cache</artifactId>
@@ -125,7 +125,6 @@
             <artifactId>fastjson</artifactId>
             <version>${fastjson.version}</version>
         </dependency>
-
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-annotations</artifactId>
@@ -279,6 +278,15 @@
             <properties>
                 <profileActive>dev</profileActive>
             </properties>
+            <!-- 只在dev生效 -->
+            <dependencies>
+                <!-- sql打印 -->
+                <dependency>
+                    <groupId>p6spy</groupId>
+                    <artifactId>p6spy</artifactId>
+                    <version>3.8.2</version>
+                </dependency>
+            </dependencies>
             <activation>
                 <activeByDefault>true</activeByDefault>
             </activation>

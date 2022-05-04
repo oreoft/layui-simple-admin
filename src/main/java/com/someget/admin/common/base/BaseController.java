@@ -3,7 +3,8 @@ package com.someget.admin.common.base;
 import com.someget.admin.common.sys.service.MenuService;
 import com.someget.admin.common.sys.service.RoleService;
 import com.someget.admin.common.sys.service.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
+
+import javax.annotation.Resource;
 
 /**
  *
@@ -11,13 +12,12 @@ import org.springframework.beans.factory.annotation.Autowired;
  * @date 2022-03-25 20:03
  */
 public class BaseController {
-	@Autowired
+	@Resource
 	protected UserService userService;
 
-	@Autowired
+	@Resource
 	protected MenuService menuService;
 
-	@Autowired
+	@Resource
 	protected RoleService roleService;
-
 }

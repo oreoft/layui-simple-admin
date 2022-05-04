@@ -43,8 +43,8 @@ spring:
       enabled: true
   # 数据库连接池配置
   datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://${host.mysql}/admin?useUnicode=true&characterEncoding=utf8&autoReconnect=true&failOverReadOnly=false&useSSL=false&serverTimezone=Asia/Shanghai
+    driver-class-name: ${datasource.driver}
+    url: ${datasource.prefix}://${host.mysql}/admin?useUnicode=true&characterEncoding=utf8&autoReconnect=true&failOverReadOnly=false&useSSL=false&serverTimezone=Asia/Shanghai
     username: ${username.mysql}
     password: ${password.mysql}
     druid:
@@ -60,7 +60,7 @@ spring:
       minEvictableIdleTimeMillis: 180000
       testOnBorrow: false
       testWhileIdle: true
-      removeAbandoned: true
+      removeAbandoned: ${open.removeAbandoned}
       removeAbandonedTimeout: 1800
       logAbandoned: true
       poolPreparedStatements: true
@@ -87,3 +87,6 @@ mybatis-plus:
   configuration:
     map-underscore-to-camel-case: true
     cache-enabled: false
+  global-config:
+    db-config:
+      id-type: auto

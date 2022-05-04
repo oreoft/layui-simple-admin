@@ -5,13 +5,21 @@ host:
 password:
   redis: ${redis.password}
   mysql: ${db.password}
-usernmae:
+username:
   mysql:  ${db.username}
+
+datasource:
+  driver: com.mysql.cj.jdbc.Driver
+  prefix: jdbc:mysql
+
+# 生产环境中不要开启Druid的removeAbandoned配置
+open:
+  removeAbandoned: false
 
 #线程池配置
 executor:
   pool:
     corePoolSize: 16
     maxPoolSize: 16
-    queueCapacity: 0
+    queueCapacity: 200
     keepAliveSeconds: 0
