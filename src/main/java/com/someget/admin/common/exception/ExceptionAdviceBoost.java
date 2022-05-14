@@ -43,7 +43,7 @@ public class ExceptionAdviceBoost {
     @ExceptionHandler({Exception.class})
     public RestResponse processException(HttpServletRequest request, Exception e) {
         String url = request.getRequestURL().toString();
-        log.error("service层未捕获异常，请求URL:[{}] msg:{}", url,  e.getMessage());
+        log.error("service层未捕获异常，请求URL:[{}] msg:{}", url,  e.getMessage(), e);
         return RestResponse.failure("敖~, 服务器发生异常");
     }
 

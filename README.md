@@ -160,4 +160,4 @@ $ git clone git@github.com:oreoft/layui-someget-admin.git
 
 ## 使用许可
 
-[MIT](LICENSE) © Oreoft
+[MIT](../cache-anno/LICENSE) © Oreoft
